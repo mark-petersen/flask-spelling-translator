@@ -1,7 +1,8 @@
 from flask import Flask, request
-from processing import do_calculation
+from processing import do_translate
 
-# from: https://blog.pythonanywhere.com/169/
+# following example at
+# https://blog.pythonanywhere.com/169/
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
@@ -10,23 +11,16 @@ app.config["DEBUG"] = True
 def adder_page():
     errors = ""
     if request.method == "POST":
-        number1 = None
-        number2 = None
-        try:
-            number1 = float(request.form["number1"])
-        except:
-            errors += "<p>{!r} is not a number.</p>\n".format(request.form["number1"])
-        try:
-            number2 = float(request.form["number2"])
-        except:
-            errors += "<p>{!r} is not a number.</p>\n".format(request.form["number2"])
-        if number1 is not None and number2 is not None:
-            result = do_calculation(number1, number2)
+        inputPhrase = None
+        inputPhrase = request.form["Type your entry in traditional spelling here:"]
+        if inputPhrase is not None:
+            result = do_translate(inputPhrase)
             return '''
                 <html>
                     <body>
-                        <p>The result is {result}</p>
-                        <p><a href="/">Click here to calculate again</a>
+                        <p>The translation in soundspel is:</p>
+                        <p>{result}</p>
+                        <p><a href="/">Click here to translte another phrase</a>
                     </body>
                 </html>
             '''.format(result=result)
@@ -35,11 +29,10 @@ def adder_page():
         <html>
             <body>
                 {errors}
-                <p>Enter your numbers:</p>
+                <p>Enter your phrase:</p>
                 <form method="post" action=".">
-                    <p><input name="number1" /></p>
-                    <p><input name="number2" /></p>
-                    <p><input type="submit" value="Do calculation" /></p>
+                    <p><input name="inputPhrase" /></p>
+                    <p><input type="submit" value="Translate to Soundspel" /></p>
                 </form>
             </body>
         </html>
