@@ -24,11 +24,11 @@ def do_translation(x):
 
     # Check for beginning of html declaration.
     # If found, take the declaration verbatim
-    if x[i]=='<':
-      while x[i]!='>':
-        i+=1
-      i+=1
-      y.append( x[iBeg:i] )
+    #if x[i]=='<':
+    #  while x[i]!='>':
+    #    i+=1
+    #  i+=1
+    #  y.append( x[iBeg:i] )
 
     # Check for beginning of a word.  Advance the
     # index until the whole word is found.
@@ -49,20 +49,20 @@ def do_translation(x):
         elif x[iBeg:i].isupper():
           reformWord = reformWord.upper()
 
-        if reformWord.lower() == word.lower():
-          # unaltered word: Color yellow
-          reformWord = '\x1b[0;96m' + reformWord + '\x1b[0m'
-        else:
-          # altered word: color blue
-          reformWord = '\x1b[0;93m' + reformWord + '\x1b[0m'
+        #if reformWord.lower() == word.lower():
+        #  # unaltered word: Color yellow
+        #  reformWord = '\x1b[0;96m' + reformWord + '\x1b[0m'
+        #else:
+        #  # altered word: color blue
+        #  reformWord = '\x1b[0;93m' + reformWord + '\x1b[0m'
 
         y.append( reformWord )
 
       # If word is not found in the dictionary, take it
       # verbatim.
       except:
-        y.append( '\x1b[0;31m' + x[iBeg:i] + '\x1b[0m' )
-        #y.append( x[iBeg:i] )
+        #y.append( '\x1b[0;31m' + x[iBeg:i] + '\x1b[0m' )
+        y.append( x[iBeg:i] )
 
     # If the character is not a letter, take it directly.
     else:
