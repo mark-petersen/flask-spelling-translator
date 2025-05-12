@@ -32,7 +32,8 @@ def do_translation(x):
 
     # Check for beginning of a word.  Advance the
     # index until the whole word is found.
-    elif x[i].isalpha():
+    #elif x[i].isalpha():
+    if x[i].isalpha():
       while x[i].isalpha():
         i+=1
         if i==len(x):
