@@ -10,7 +10,7 @@ def do_calculation(number1, number2):
 #    for row in csv_reader:
 #      dictionary[row[0]] = row[1]
 
-def do_translate(x):
+def do_translation(x):
   return(x)
 #  # Translates from traditional spelling to simplified spelling
 #  # Mark Petersen, American Literacy Council
