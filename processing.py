@@ -52,7 +52,8 @@ def do_translation(x):
 
         if reformWord.lower() == word.lower():
           # unaltered word: Color yellow
-          reformWord = '<span style="color: yellow">' + reformWord + '</span>'
+          #reformWord = '<span style="color: yellow">' + reformWord + '</span>'
+          reformWord = reformWord
         else:
           # altered word: color blue
           reformWord = '<span style="color: blue">' + reformWord + '</span>'
@@ -63,7 +64,7 @@ def do_translation(x):
       # verbatim.
       except:
         #y.append( '\x1b[0;31m' + x[iBeg:i] + '\x1b[0m' )
-        y.append( x[iBeg:i] )
+        y.append( '<span style="color: red">' + x[iBeg:i] + '</span>' )
 
     # If the character is not a letter, take it directly.
     else:
