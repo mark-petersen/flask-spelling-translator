@@ -16,11 +16,11 @@ def adder_page():
             return '''
                 <html>
                     <body>
-                        <p>The result is {result}</p>
+                        <p>original: {inputText} The result is: {result}</p>
                         <p><a href="/">Click here to translate again</a> </p>
                     </body>
                 </html>
-            '''.format(result=result)
+            '''.format(inputText=inputText, result=result)
 
     return '''
         <html>
