@@ -52,10 +52,10 @@ def do_translation(x):
 
         if reformWord.lower() == word.lower():
           # unaltered word: Color yellow
-          reformWord = '<span style="color: yellow">' + reformWord + '<\span>'
+          reformWord = '<span style="color: yellow">' + reformWord + '</span>'
         else:
           # altered word: color blue
-          reformWord = '<span style="color: blue">' + reformWord + '<\span>'
+          reformWord = '<span style="color: blue">' + reformWord + '</span>'
 
         y.append( reformWord )
 
