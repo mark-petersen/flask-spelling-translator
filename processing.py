@@ -64,7 +64,7 @@ def do_translation(x):
       # verbatim.
       except:
         #y.append( '\x1b[0;31m' + x[iBeg:i] + '\x1b[0m' )
-        y.append( '<span style="color: red">' + x[iBeg:i] + '</span>' )
+        y.append( '<span style="color: purple">' + x[iBeg:i] + '</span>' )
 
     # If the character is not a letter, take it directly.
     else:
