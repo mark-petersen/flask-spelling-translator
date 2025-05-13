@@ -16,8 +16,7 @@ def adder_page():
             return '''
                 <html>
                     <body>
-                        <p>Original text: {inputText}</p>
-                        <p>The translation into Soundspel is: {result}</p>
+                        <p>The result is {result}</p>
                         <p><a href="/">Click here to translate again</a> </p>
                     </body>
                 </html>
