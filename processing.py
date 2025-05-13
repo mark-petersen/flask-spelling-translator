@@ -1,14 +1,14 @@
 def do_calculation(number1, number2):
     return number1 + number2
 
-#import csv
+import csv
 #import string as str
 #
-#dictionary = {}
-#with open('twoColSoundSpel.csv', encoding='UTF-8', newline='') as csv_file:
-#    csv_reader = csv.reader(csv_file, delimiter=',')
-#    for row in csv_reader:
-#      dictionary[row[0]] = row[1]
+dictionary = {}
+with open('twoColSoundSpel.csv', encoding='UTF-8', newline='') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+      dictionary[row[0]] = row[1]
 
 def do_translation(x):
   #return(x)
