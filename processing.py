@@ -50,12 +50,12 @@ def do_translation(x):
         elif x[iBeg:i].isupper():
           reformWord = reformWord.upper()
 
-        #if reformWord.lower() == word.lower():
-        #  # unaltered word: Color yellow
-        #  reformWord = '\x1b[0;96m' + reformWord + '\x1b[0m'
-        #else:
-        #  # altered word: color blue
-        #  reformWord = '\x1b[0;93m' + reformWord + '\x1b[0m'
+        if reformWord.lower() == word.lower():
+          # unaltered word: Color yellow
+          reformWord = '<span style="color: yellow">' + reformWord + '<\span>'
+        else:
+          # altered word: color blue
+          reformWord = '<span style="color: blue">' + reformWord + '<\span>'
 
         y.append( reformWord )
 
