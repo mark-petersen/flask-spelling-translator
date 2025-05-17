@@ -18,7 +18,7 @@ def adder_page():
                     <body>
                         <p><strong>original text:</strong></p>
                         <p>{inputText}</p>
-                        <p><strong>The SoundSpel translation is:</strong></p>
+                        <p><strong>The SoundSpel translation is below. </strong> Black words are the same from traditional spelling to SoundSpel; blue words differ; purple words were not in the SoundSpel dictionary.</p>
                         <p>{result}</p>
                         <p><a href="/">Click here to translate again</a> </p>
                     </body>
