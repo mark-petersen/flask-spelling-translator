@@ -16,11 +16,11 @@ def adder_page():
             return '''
                 <html>
                     <body>
-                        <p><strong>original text:</strong></p>
+                        <p><strong>Original text:</strong></p>
                         <p>{inputText}</p>
                         <p><strong>The SoundSpel translation is below. </strong> Black words are the same from traditional spelling to SoundSpel; blue words differ; purple words were not in the SoundSpel dictionary.</p>
                         <p>{result}</p>
-                        <p><a href="/">Click here to translate again</a> </p>
+                        <p><a href="/">Click here to translate another text!</a> </p>
                     </body>
                 </html>
             '''.format(inputText=inputText, result=result)
