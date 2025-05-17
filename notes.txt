@@ -1,0 +1,5 @@
+look here:
+https://dashboard.render.com/
+https://dashboard.render.com/web/srv-d0gfep49c44c73fhd1r0
+manual deploy, deploy latest commit. Then go here:
+https://americanliteracy.onrender.com/
