@@ -31,7 +31,7 @@ def adder_page():
                 {errors}
                 <p>Enter your text here:</p>
                 <form method="post" action=".">
-                    <p><textarea name="inputText" cols="60" rows="10"></textarea></p>
+                    <p><textarea name="inputText" cols="60" rows="10" style="white-space:pre;"></textarea></p>
                     <p><input type="submit" value="translate into SoundSpel!" /></p>
                 </form>
             </body>
