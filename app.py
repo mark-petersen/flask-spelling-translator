@@ -33,7 +33,7 @@ def adder_page():
                 <h2>Written as it Sounds. Pronounced as it's Written</h2>
                 <p>Enter your text here:</p>
                 <form method="post" action=".">
-                    <p><textarea name="inputText" cols="60" rows="10" style="white-space:pre;"></textarea></p>
+                    <p><textarea name="inputText" cols="100" rows="20" style="white-space:pre;"></textarea></p>
                     <p><input type="submit" value="translate into SoundSpel!" /></p>
                 </form>
                 <p>For more information, go to <a href="https://americanliteracy.com/">https://americanliteracy.com/</a></p>
